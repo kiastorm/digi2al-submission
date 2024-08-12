@@ -1,0 +1,79 @@
+{{ block "login-form" . }}
+<form
+  class="bw-AuthLayoutForm"
+  action="/login"
+  hx-boost="true"
+  method="post"
+  hx-target="this"
+  hx-swap="outerHTML"
+>
+  <div class="bw-FormControlGroup">
+    <div class="bw-FormControlRoot">
+      <label class="bw-FormControlLabel" for="username">Username</label>
+      <div class="bw-TextFieldRoot">
+        <input
+          class="bw-TextFieldInput"
+          type="text"
+          id="username"
+          name="username"
+          value="{{ .FormData.username }}"
+          {{if
+          .Errors.username}}
+          aria-describedby="username-error"
+          {{end}}
+        />
+      </div>
+      {{if .Errors.username}}
+      <div
+        id="username-error"
+        class="bw-FormControlErrorMessage"
+        aria-live="polite"
+        class="error"
+      >
+        {{range .Errors.username}} {{.}} {{end}}
+      </div>
+      {{end}}
+    </div>
+    <div class="bw-FormControlRoot">
+      <toggle-password>
+        <label class="bw-FormControlLabel" for="password-input">Password</label>
+        <div class="bw-TextFieldRoot">
+          <input
+            required
+            aria-required="true"
+            class="bw-TextFieldInput"
+            {{if
+            .Errors.password}}
+            aria-describedby="password-error"
+            {{end}}
+            id="password"
+            name="password"
+            type="password"
+          />
+
+          <div class="bw-TextFieldAddornment">
+            <button
+              aria-controls="password"
+              class="bw-Button bw-variant-ghost bw-size-1"
+              toggle
+              hidden
+            >
+              <span aria-label="Show password" is-hidden>Show</span>
+              <span aria-label="Hide password" is-visible>Hide</span>
+            </button>
+          </div>
+        </div>
+      </toggle-password>
+      {{if .Errors.password}} {{range .Errors.password}}
+      <div class="bw-FormControlErrorMessage" aria-live="polite" class="error">
+        {{.}}
+      </div>
+      {{end}} {{end}}
+    </div>
+  </div>
+
+  <button class="bw-Button bw-variant-primary bw-size-2" type="submit">
+    Login
+  </button>
+</form>
+{{end}}

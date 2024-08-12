@@ -1,0 +1,14 @@
+{{ define "styles" }}
+<link rel="stylesheet" href="/static/styles/layouts/auth.css" />
+<link rel="stylesheet" href="/static/styles/components/button.css" />
+<link rel="stylesheet" href="/static/styles/components/container.css" />
+<link rel="stylesheet" href="/static/styles/components/form-control.css" />
+<link rel="stylesheet" href="/static/styles/components/text-field.css" />
+{{end}} {{define "body"}}
+<body class="bw-AuthLayoutRoot">
+  <header class="bw-AuthLayoutHeader">
+    <a aria-label="Home" class="bw-Logo" href="/"> Badgerworx </a>
+  </header>
+  <main class="bw-AuthLayoutMain">{{ template "main" . }}</main>
+</body>
+{{end}}

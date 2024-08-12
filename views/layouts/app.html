@@ -1,0 +1,27 @@
+{{ define "styles" }}
+<link rel="stylesheet" href="/static/styles/layouts/app.css" />
+<link rel="stylesheet" href="/static/styles/components/button.css" />
+<link rel="stylesheet" href="/static/styles/components/container.css" />
+{{end}} {{define "body"}}
+<body class="bw-AppLayoutRoot">
+  <header class="bw-AppLayoutHeader">
+    <div class="bw-AppLayoutHeaderContainer bw-Container bw-size-2">
+      <a aria-label="Home" class="bw-Logo" href="/">Badgerworx</a>
+      <nav class="bw-UserActionsRoot">
+        {{if .Username}}
+        <span class="bw-UserActionsUsername">{{.Username}}</span>
+        <form action="/logout" method="post">
+          <button class="bw-Button bw-size-2 bw-variant-ghost" type="submit">
+            Log out
+          </button>
+        </form>
+        {{else}}
+        <a class="bw-Button bw-size-2 bw-variant-primary" href="/login"
+          >Login</a
+        >
+        {{end}}
+      </nav>
+    </div>
+  </header>
+</body>
+<main class="bw-AppLayoutMain">{{ template "main" . }} {{end}}</main>

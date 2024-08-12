@@ -1,0 +1,14 @@
+.bw-Container {
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 1rem;
+  padding-right: 1rem;
+
+  &.bw-size-1 {
+    max-width: 448px;
+  }
+
+  &.bw-size-2 {
+    max-width: 1136px;
+  }
+}

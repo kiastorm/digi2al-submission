@@ -1,0 +1,17 @@
+{{block "user-actions" . }}
+<div id="user-actions" class="bw-UserActionsRoot">
+  {{if .Username}}
+  <span>{{.Username}}</span>
+  <form
+    hx-boost="true"
+    hx-target="#user-actions"
+    action="/logout"
+    method="post"
+  >
+    <button type="submit">Log out</button>
+  </form>
+  {{else}}
+  <a href="/login">Login</a>
+  {{end}}
+</div>
+{{end}}

@@ -1,0 +1,123 @@
+{{ block "signup-form" . }}
+<form
+  class="bw-AuthLayoutForm"
+  action="/signup"
+  hx-boost="true"
+  method="post"
+  hx-target="this"
+  hx-swap="outerHTML"
+>
+  <div class="bw-FormControlGroup">
+    <div class="bw-FormControlRoot">
+      <label class="bw-FormControlLabel" for="username">Username</label>
+      <div class="bw-TextFieldRoot">
+        <input
+          class="bw-TextFieldInput"
+          type="text"
+          id="username"
+          name="username"
+          value="{{ .FormData.username }}"
+          {{if
+          .Errors.username}}
+          aria-describedby="username-error"
+          {{end}}
+        />
+      </div>
+      {{if .Errors.username}}
+      <div
+        id="username-error"
+        class="bw-FormControlErrorMessage"
+        aria-live="polite"
+        class="error"
+      >
+        {{range .Errors.username}} {{.}} {{end}}
+      </div>
+      {{end}}
+    </div>
+    <div class="bw-FormControlRoot">
+      <toggle-password>
+        <label class="bw-FormControlLabel" for="password">Password</label>
+        <div class="bw-TextFieldRoot">
+          <input
+            class="bw-TextFieldInput"
+            id="password"
+            name="password"
+            type="password"
+            {{if
+            .Errors.username}}
+            aria-describedby="password-error"
+            {{end}}
+          />
+
+          <div class="bw-TextFieldAddornment">
+            <button
+              aria-controls="password"
+              class="bw-Button bw-size-1 bw-variant-ghost"
+              toggle
+              hidden
+            >
+              <span is-hidden>Show</span>
+              <span is-visible>Hide</span>
+            </button>
+          </div>
+        </div>
+      </toggle-password>
+      {{if .Errors.password}}
+      <div
+        id="password-error"
+        class="bw-FormControlErrorMessage"
+        aria-live="polite"
+        class="error"
+      >
+        {{range .Errors.password}} {{.}} {{end}}
+      </div>
+      {{end}}
+    </div>
+    <div class="bw-FormControlRoot">
+      <toggle-password>
+        <label class="bw-FormControlLabel" for="confirmPassword"
+          >Confirm Password</label
+        >
+        <div class="bw-TextFieldRoot">
+          <input
+            class="bw-TextFieldInput"
+            id="confirmPassword"
+            name="confirmPassword"
+            type="password"
+            {{if
+            .Errors.username}}
+            aria-describedby="confirmPassword-error"
+            {{end}}
+          />
+
+          <div class="bw-TextFieldAddornment">
+            <button
+              aria-controls="confirmPassword"
+              class="bw-Button bw-size-1 bw-variant-ghost"
+              toggle
+              hidden
+            >
+              <span is-hidden>Show</span>
+              <span is-visible>Hide</span>
+            </button>
+          </div>
+        </div>
+      </toggle-password>
+      {{if .Errors.confirmPassword}}
+      <div
+        id="confirmPassword-error"
+        class="bw-FormControlErrorMessage"
+        aria-live="polite"
+        class="error"
+      >
+        {{range .Errors.confirmPassword}} {{.}} {{end}}
+      </div>
+      {{end}}
+    </div>
+  </div>
+
+  <button class="bw-Button bw-size-2 bw-variant-primary" type="submit">
+    Get started
+  </button>
+</form>
+{{end}}

@@ -1,0 +1,26 @@
+.bw-FormControlRoot {
+}
+
+.bw-FormControlLabel {
+  display: block;
+  font-family: var(--sans-font-family);
+  color: var(--gray-12);
+  margin-bottom: 0.25rem;
+  font-size: 0.875rem;
+  line-height: 1.25rem;
+  font-weight: 500;
+}
+
+.bw-FormControlErrorMessage {
+  display: block;
+  font-family: var(--sans-font-family);
+  margin-top: 0.25rem;
+  font-size: 0.875rem;
+  line-height: 1.25rem;
+  color: var(--red-10);
+}
+
+.bw-FormControlGroup {
+  display: grid;
+  gap: 1.5rem;
+}

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>{{template "title" .}} | Kia Storm | Digi2al</title>
+
+    <link rel="stylesheet" href="/static/styles/reset.css" />
+    <link rel="stylesheet" href="/static/styles/main.css" />
+    <link rel="stylesheet" href="/static/styles/tokens/color/gray.css" />
+    <link rel="stylesheet" href="/static/styles/tokens/color/gray-alpha.css" />
+    <link rel="stylesheet" href="/static/styles/tokens/color/indigo.css" />
+    <link
+      rel="stylesheet"
+      href="/static/styles/tokens/color/indigo-alpha.css"
+    />
+    <link rel="stylesheet" href="/static/styles/tokens/color/red.css" />
+    <link rel="stylesheet" href="/static/styles/tokens/typography.css" />
+    {{ block "styles" . }} {{ end }}
+    <link rel="stylesheet" href="/static/styles/utilities.css" />
+  </head>
+
+  {{ template "body" . }}
+
+  <script src="/static/htmx-2.0.1.min.js"></script>
+  {{ block "scripts" . }} {{ end }}
+</html>

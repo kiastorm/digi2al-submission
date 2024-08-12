@@ -1,0 +1,54 @@
+html {
+  font-family: var(--default-font-family);
+  -webkit-font-smoothing: antialiased;
+}
+
+p {
+  line-height: 1.5rem;
+  margin-top: 1.5rem;
+  margin-bottom: 0;
+}
+
+/* Headings */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: var(--sans-font-family);
+  margin-top: 1.5rem;
+  margin-bottom: 0;
+  line-height: 1.5rem;
+}
+
+h1 {
+  font-size: 1.414rem;
+}
+
+h2 {
+  font-size: 0.707rem;
+}
+
+h3 {
+  font-size: 0.4713333333333333rem;
+}
+
+toggle-password [toggle][aria-pressed="true"] [is-hidden],
+toggle-password [toggle][aria-pressed="false"] [is-visible] {
+  display: none;
+}
+
+.bw-Logo {
+  all: unset;
+  cursor: pointer;
+  font-family: var(--serif-font-family);
+  font-size: 1.25rem;
+  font-weight: 700;
+  letter-spacing: -0.05em;
+  text-transform: uppercase;
+
+  &:focus-visible {
+    outline: 2px solid var(--indigo-a8);
+  }
+}

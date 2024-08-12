@@ -1,0 +1,28 @@
+.bw-AuthLayoutRoot {
+  background-image: radial-gradient(circle, var(--indigo-2), var(--indigo-1));
+  padding-top: 4rem;
+}
+
+.bw-AuthLayoutMain {
+}
+
+.bw-AuthLayoutTitle,
+.bw-AuthLayoutHelperMessage,
+.bw-AuthLayoutHeader {
+  text-align: center;
+}
+
+.bw-AuthLayoutContainer {
+  padding-top: 1.5rem;
+  padding-bottom: 1.5rem;
+}
+
+.bw-AuthLayoutForm {
+  display: grid;
+  gap: 2rem;
+  margin-top: 2rem;
+  padding: 2rem;
+  background-color: var(--indigo-1);
+  border-radius: 8px;
+  border: 1px solid var(--gray-5);
+}

@@ -1,0 +1,11 @@
+{{define "title"}} Signup {{end}} {{define "main"}}
+<div class="bw-AuthLayoutContainer bw-Container bw-size-1">
+  <h1 class="bw-AuthLayoutTitle">Signup</h1>
+  <p class="bw-AuthLayoutHelperMessage">
+    Already have an account? <a href="login">Login</a>
+  </p>
+  {{ template "signup-form" . }}
+</div>
+{{end}} {{ define "scripts"}}
+<script src="/static/toggle-password.js"></script>
+{{end}}

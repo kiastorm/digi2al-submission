@@ -1,0 +1,92 @@
+.bw-Button {
+  all: unset;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  user-select: none;
+  font-family: var(--sans-font-family);
+  font-weight: medium;
+  text-align: center;
+  height: var(--button-height);
+
+  /***** SIZES *****/
+
+  &:where(.bw-size-1) {
+    --button-height: 1.5rem;
+    border-radius: 3px;
+    font-size: 12px;
+    line-height: 16px;
+    letter-spacing: 0.0025em;
+    padding-left: 0.5rem;
+    padding-right: 0.5rem;
+
+    &:where(.bw-variant-ghost) {
+      margin-left: -0.5rem;
+      margin-right: -0.5rem;
+    }
+  }
+
+  &:where(.bw-size-2) {
+    --button-height: 2.5rem;
+    border-radius: 6px;
+    font-size: 16px;
+    line-height: 20px;
+    font-weight: 500;
+    padding-left: 0.75rem;
+    padding-right: 0.75rem;
+
+    &:where(.bw-variant-ghost) {
+      margin-left: -0.75rem;
+      margin-right: -0.75rem;
+    }
+  }
+
+  /***** VARIANTS *****/
+
+  &:where(.bw-variant-ghost) {
+    color: var(--gray-a11);
+
+    @media (hover: hover) {
+      &:where(:hover) {
+        background-color: var(--gray-a3);
+      }
+    }
+
+    &:where(:focus-visible) {
+      outline: 2px solid var(--gray-8);
+      outline-offset: -1px;
+    }
+
+    &:where(:active) {
+      background-color: var(--gray-a4);
+    }
+  }
+
+  &:where(.bw-variant-primary) {
+    background-color: var(--indigo-9);
+    color: var(--indigo-contrast);
+
+    @media (hover: hover) {
+      &:where(:hover) {
+        background-color: var(--indigo-10);
+      }
+    }
+
+    &:where(:active) {
+      background-color: var(--indigo-10);
+    }
+
+    @media (pointer: coarse) {
+      &:where(:active) {
+        outline: 0.5em solid var(--indigo-a4);
+      }
+    }
+
+    &:where(:focus-visible) {
+      outline: 2px solid var(--indigo-8);
+      outline-offset: 2px;
+    }
+  }
+}
