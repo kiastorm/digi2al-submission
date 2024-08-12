@@ -17,7 +17,8 @@ I chose to Go + HTMX for simplicity and ease of use, given the requirements.
 I chose a mock authentication system using vanilla Go.
 
 > 3. Progressively enhanced version, which may or may not dynamically update the page
->    The `toggle-password` web component is progressively enhanced, only showing the toggle when JavaScript is available.
+
+The `toggle-password` web component is progressively enhanced, only showing the toggle when JavaScript is available.
 
 > 4. WCAG 2.1 conformance levels
 
