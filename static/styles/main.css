@@ -34,6 +34,11 @@ h3 {
   font-size: 0.4713333333333333rem;
 }
 
+toggle-password [toggle][aria-pressed="true"] [is-hidden],
+toggle-password [toggle][aria-pressed="false"] [is-visible] {
+  display: none;
+}
+
 .bw-Logo {
   all: unset;
   cursor: pointer;
