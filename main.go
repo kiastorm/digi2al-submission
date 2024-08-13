@@ -6,6 +6,7 @@ import (
 	"net/http"
 )
 
+// TODO: Improve this
 type Page struct {
 	Title    string
 	Errors   map[string][]string
@@ -13,7 +14,7 @@ type Page struct {
 	Username string
 }
 
-// Users store
+
 var users = map[string]string{
 	"admin": "password",
 }

@@ -30,7 +30,8 @@
         aria-live="polite"
         class="error"
       >
-        {{range .Errors.username}} {{.}} {{end}}
+        {{range .Errors.username}} {{.}}<br />
+        {{end}}
       </div>
       {{end}}
     </div>
@@ -64,11 +65,17 @@
           </div>
         </div>
       </toggle-password>
-      {{if .Errors.password}} {{range .Errors.password}}
-      <div class="bw-FormControlErrorMessage" aria-live="polite" class="error">
-        {{.}}
+      {{if .Errors.password}}
+      <div
+        id="password-error"
+        class="bw-FormControlErrorMessage"
+        aria-live="polite"
+        class="error"
+      >
+        {{range .Errors.password}} {{.}}<br />
+        {{end}}
       </div>
-      {{end}} {{end}}
+      {{end}}
     </div>
   </div>
 

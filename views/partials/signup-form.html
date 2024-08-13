@@ -30,7 +30,8 @@
         aria-live="polite"
         class="error"
       >
-        {{range .Errors.username}} {{.}} {{end}}
+        {{range .Errors.username}} {{.}}<br />
+        {{end}}
       </div>
       {{end}}
     </div>
@@ -69,7 +70,8 @@
         aria-live="polite"
         class="error"
       >
-        {{range .Errors.password}} {{.}} {{end}}
+        {{range .Errors.password}} {{.}}<br />
+        {{end}}
       </div>
       {{end}}
     </div>
@@ -110,7 +112,8 @@
         aria-live="polite"
         class="error"
       >
-        {{range .Errors.confirmPassword}} {{.}} {{end}}
+        {{range .Errors.confirmPassword}} {{.}}<br />
+        {{end}}
       </div>
       {{end}}
     </div>

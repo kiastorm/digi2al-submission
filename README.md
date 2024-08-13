@@ -28,6 +28,7 @@ I've tried to make the project as accessible as possible within reasonable time,
 
 - Incorporate the learnings found here https://technology.blog.gov.uk/2021/04/19/simple-things-are-complicated-making-a-show-password-option/
   - More specifically, I would announce the change of state to screen readers when toggling between show/hide
+- More comprehensive design tokens / CSS properties
 - Documentation, tests, better organisation etc.
 
 Hope you like it!
