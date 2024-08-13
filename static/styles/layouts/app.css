@@ -2,16 +2,10 @@
   background-image: radial-gradient(circle, var(--indigo-2), var(--indigo-1));
 }
 
-.bw-AppLayoutMain {
-}
-
 .bw-AppLayoutTitle,
 .bw-AppLayoutHelperMessage,
 .bw-AppLayoutHeader {
   text-align: center;
-}
-
-.bw-AppLayoutHeader {
 }
 
 .bw-AppLayoutHeaderContainer {

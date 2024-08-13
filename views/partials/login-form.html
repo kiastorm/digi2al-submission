@@ -21,6 +21,7 @@
           .Errors.username}}
           aria-describedby="username-error"
           {{end}}
+          autocomplete="username"
         />
       </div>
       {{if .Errors.username}}
@@ -50,6 +51,9 @@
             id="password"
             name="password"
             type="password"
+            autocomplete="current-password"
+            autocapitalize="none"
+            spellcheck="false"
           />
 
           <div class="bw-TextFieldAddornment">
