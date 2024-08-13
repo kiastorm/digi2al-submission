@@ -20,7 +20,7 @@ I chose a mock authentication system using vanilla Go.
 
 The `toggle-password` web component is progressively enhanced, only showing the toggle when JavaScript is available.
 
-Also, I made us of HTMX's `hx-boost` attribute on appropriate forms to render the requests' HTML response (the same form but with any form validation errors) without a full page reload.
+Also, I made use of HTMX's `hx-boost` attribute on appropriate forms to render the requests' HTML response (the same form but with any form validation errors) without a full page reload.
 
 > 4. WCAG 2.1 conformance levels
 
@@ -28,7 +28,7 @@ I've tried to make the project as accessible as possible within reasonable time,
 
 ## What else would I do?
 
-- Further improve accessibility, like incorporating the learnings found here: httpxs://technology.blog.gov.uk/2021/04/19/simple-things-are-complicated-making-a-show-password-option/
+- Further improve accessibility, like incorporating the learnings found here: https://technology.blog.gov.uk/2021/04/19/simple-things-are-complicated-making-a-show-password-option/
   - More specifically, I would announce the change of the password's visbility to screen readers when toggling between show/hide
 - More comprehensive design tokens / CSS properties
 - Better HTML templating?
