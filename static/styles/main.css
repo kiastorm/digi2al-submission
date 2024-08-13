@@ -1,8 +1,8 @@
 html {
   font-family: var(--default-font-family);
-  -webkit-font-smoothing: antialiased;
 }
 
+/** TODO: Use classnames to style text instead to decouple styling from semantics */
 p {
   line-height: 1.5rem;
   margin-top: 1.5rem;
@@ -32,11 +32,6 @@ h2 {
 
 h3 {
   font-size: 0.4713333333333333rem;
-}
-
-toggle-password [toggle][aria-pressed="true"] [is-hidden],
-toggle-password [toggle][aria-pressed="false"] [is-visible] {
-  display: none;
 }
 
 .bw-Logo {
