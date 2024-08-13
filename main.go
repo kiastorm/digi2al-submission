@@ -190,7 +190,6 @@ func loginActionHandler(w http.ResponseWriter, r *http.Request) {
 		http.Redirect(w, r, "/", http.StatusOK)
 	} else {
 		http.Redirect(w, r, "/", http.StatusSeeOther)
-		log.Println("NORMAL ")
 	}
 }
 
