@@ -31,7 +31,7 @@ I've tried to make the project as accessible as possible within reasonable time,
 - Further improve accessibility, like incorporating the learnings found here: https://technology.blog.gov.uk/2021/04/19/simple-things-are-complicated-making-a-show-password-option/
   - More specifically, I would announce the change of the password's visbility to screen readers when toggling between show/hide
 - More comprehensive design tokens / CSS properties
-- Better HTML templating?
+- Better HTML templating. The way that scripts and styles are injected into routes is insufficient. Styles and scripts are defined at the layout level, but this could be improved by allowing them to be defined at the route level also.
 - Documentation, (accessibility, component & e2e) tests, better organisation etc
 
 Hope you like it!
