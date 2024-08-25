@@ -1,13 +1,13 @@
-{{define "title"}} Login {{end}} {{define "main"}}
-
-<div class="bw-AuthLayoutContainer bw-Container bw-size-1">
-  <h1 class="bw-AuthLayoutTitle">Login</h1>
-  <p class="bw-AuthLayoutHelperMessage">
-    Haven't signed up yet? <a href="signup">Create an account</a>
-  </p>
-  {{ template "login-form" . }}
-</div>
-
-{{end}} {{ define "scripts"}}
-<script src="/static/toggle-password.js"></script>
-{{end}}
+{{ define "title" }}Login{{ end }}
+{{ define "main" }}
+  <div class="bw-AuthLayoutContainer bw-Container bw-size-1">
+    <h1 class="bw-AuthLayoutTitle">Login</h1>
+    <p class="bw-AuthLayoutHelperMessage">
+      Haven't signed up yet? <a href="signup">Create an account</a>
+    </p>
+    {{ template "login-form" . }}
+  </div>
+{{ end }}
+{{ define "scripts" }}
+  <script src="/static/toggle-password.js"></script>
+{{ end }}

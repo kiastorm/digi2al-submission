@@ -55,13 +55,14 @@
 
           <div class="bw-TextFieldAddornment">
             <button
+              type="button"
               aria-controls="password"
               class="bw-Button bw-size-1 bw-variant-ghost"
               toggle
               hidden
             >
-              <span is-hidden>Show</span>
-              <span is-visible>Hide</span>
+              <span aria-label="Show password" is-hidden>Show</span>
+              <span aria-label="Hide password" is-visible>Hide</span>
             </button>
           </div>
         </div>
@@ -100,13 +101,18 @@
 
           <div class="bw-TextFieldAddornment">
             <button
+              type="button"
               aria-controls="confirmPassword"
               class="bw-Button bw-size-1 bw-variant-ghost"
               toggle
               hidden
             >
-              <span is-hidden>Show</span>
-              <span is-visible>Hide</span>
+              <span aria-label="Show password confirmation" is-hidden
+                >Show</span
+              >
+              <span aria-label="Hide password confirmation" is-visible
+                >Hide</span
+              >
             </button>
           </div>
         </div>
@@ -125,7 +131,11 @@
     </div>
   </div>
 
-  <button class="bw-Button bw-size-2 bw-variant-primary" type="submit">
+  <button
+    aria-label="Submit form"
+    class="bw-Button bw-size-2 bw-variant-primary"
+    type="submit"
+  >
     Get started
   </button>
 </form>

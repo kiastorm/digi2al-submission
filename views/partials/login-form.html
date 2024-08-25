@@ -1,90 +1,55 @@
 {{ block "login-form" . }}
-<form
-  class="bw-AuthLayoutForm"
-  action="/login"
-  hx-boost="true"
-  method="post"
-  hx-target="this"
-  hx-swap="outerHTML"
->
-  <div class="bw-FormControlGroup">
-    <div class="bw-FormControlRoot">
-      <label class="bw-FormControlLabel" for="username">Username</label>
-      <div class="bw-TextFieldRoot">
-        <input
-          class="bw-TextFieldInput"
-          type="text"
-          id="username"
-          name="username"
-          value="{{ .FormData.username }}"
-          {{if
-          .Errors.username}}
-          aria-describedby="username-error"
-          {{end}}
-          autocomplete="username"
-        />
-      </div>
-      {{if .Errors.username}}
-      <div
-        id="username-error"
-        class="bw-FormControlErrorMessage"
-        aria-live="polite"
-        class="error"
-      >
-        {{range .Errors.username}} {{.}}<br />
-        {{end}}
-      </div>
-      {{end}}
-    </div>
-    <div class="bw-FormControlRoot">
-      <toggle-password>
-        <label class="bw-FormControlLabel" for="password">Password</label>
+  <form
+    class="bw-AuthLayoutForm"
+    action="/login"
+    hx-boost="true"
+    method="post"
+    hx-target="this"
+    hx-swap="outerHTML">
+    <div class="bw-FormControlGroup">
+      <div class="bw-FormControlRoot">
+        <label class="bw-FormControlLabel" for="username">Username</label>
         <div class="bw-TextFieldRoot">
           <input
-            required
-            aria-required="true"
             class="bw-TextFieldInput"
-            {{if
-            .Errors.password}}
-            aria-describedby="password-error"
-            {{end}}
-            id="password"
-            name="password"
-            type="password"
-            autocomplete="current-password"
-            autocapitalize="none"
-            spellcheck="false"
-          />
-
-          <div class="bw-TextFieldAddornment">
-            <button
-              aria-controls="password"
-              class="bw-Button bw-variant-ghost bw-size-1"
-              toggle
-              hidden
-            >
-              <span aria-label="Show password" is-hidden>Show</span>
-              <span aria-label="Hide password" is-visible>Hide</span>
-            </button>
-          </div>
+            type="text"
+            id="username"
+            name="username"
+            value="{{ .FormData.username }}"
+            {{ if
+              .Errors.username
+            }}
+              aria-describedby="username-error"
+            {{ end }}
+            autocomplete="username" />
         </div>
-      </toggle-password>
-      {{if .Errors.password}}
-      <div
-        id="password-error"
-        class="bw-FormControlErrorMessage"
-        aria-live="polite"
-        class="error"
-      >
-        {{range .Errors.password}} {{.}}<br />
-        {{end}}
+        {{ if .Errors.username }}
+          <div
+            id="username-error"
+            class="bw-FormControlErrorMessage"
+            aria-live="polite"
+            class="error">
+            {{ range .Errors.username }}{{ . }}<br />{{ end }}
+          </div>
+        {{ end }}
       </div>
-      {{end}}
+      {{ template "password-input" .PasswordInput }}
+      {{ if .Errors.password }}
+        <div
+          id="password-error"
+          class="bw-FormControlErrorMessage"
+          aria-live="polite"
+          class="error">
+          {{ range .Errors.password }}{{ . }}<br />{{ end }}
+        </div>
+      {{ end }}
     </div>
-  </div>
 
-  <button class="bw-Button bw-variant-primary bw-size-2" type="submit">
-    Login
-  </button>
-</form>
-{{end}}
+    <button
+      aria-label="Submit form"
+      class="bw-Button bw-variant-primary bw-size-2"
+      type="submit">
+      Login
+    </button>
+  </form>
+{{ end }}
